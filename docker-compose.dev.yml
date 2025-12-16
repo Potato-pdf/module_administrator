@@ -1,0 +1,11 @@
+services:
+  api:
+    container_name: ${CONTAINER_NAME}
+    build: 
+      context: .
+      dockerfile: ${DOCKER_FILE}
+    ports:
+      - ${EXTERNAL_PORT}:${INTERNAL_PORT}
+    restart: ${RESTART}
+    volumes:
+      - .:/app

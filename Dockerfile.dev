@@ -1,0 +1,15 @@
+FROM golang:1.25
+
+WORKDIR /app
+
+
+# Instala Air para hot reload
+RUN go install github.com/air-verse/air@latest
+
+COPY go.mod ./
+RUN go mod download && go mod verify
+
+COPY . .
+
+# Usa Air para desarrollo con hot reload
+CMD ["/go/bin/air"]
