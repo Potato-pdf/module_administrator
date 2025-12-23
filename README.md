@@ -1,33 +1,9 @@
-# Lumina Orchestrator
-
-Orquestador de tareas para módulos de IA (RAG, MCP, etc.)
-
-## 🚀 Inicio Rápido
-
 ### Prerrequisitos
 - Go 1.21+
 - Redis (via Docker)
 
 ### Instalación
-
-1. Clonar repositorio
-```bash
-git clone <repo-url>
-cd LuminaMO_Orchestrator_Modules_Agents
-```
-
-2. Instalar dependencias
-```bash
-go mod download
-```
-
-3. Configurar variables de entorno
-```bash
-cp .env.example .env
-# Editar .env con tus valores
-```
-
-4. Iniciar Redis (en otro repositorio)
+ Iniciar Redis (en otro repositorio)
 ```bash
 docker-compose up -d
 ```
